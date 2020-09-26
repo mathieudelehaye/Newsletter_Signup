@@ -66,6 +66,6 @@ app.post('/failure', function(req, res) {
   res.redirect("/")
 })
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() { // dynamic port used by heroku or local port 3000 
   console.log("Server started on port 3000")
 })
